@@ -18,13 +18,13 @@ def display_board(board)
     puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-      
+
 #input_to_index
 def input_to_index(index)
     index.to_i - 1
 end
 
-      
+
 #position_taken?
 def position_taken?(board, index)
     if board[index] == " "
@@ -37,8 +37,8 @@ def position_taken?(board, index)
         true
     end
 end
-      
-      
+
+
 #valid_move?
     def valid_move?(board, index)
     if index.between?(0, 8) == false || position_taken?(board, index) == true
@@ -47,12 +47,12 @@ end
         true
     end
 end
-      
+
 # Move
 def move(board,input_to_index,value = "X")
     board[input_to_index] = value
 end
-      
+
 #turn
 def turn(board)
     puts "Please enter 1-9:"
@@ -76,7 +76,7 @@ def turn_count(board)
     end
     counter
 end
-  
+
   #current_player
   def current_player(array)
     if turn_count(array) % 2 == 0
@@ -91,11 +91,11 @@ def won?(board)
         win_index_1 = win_combination[0]
         win_index_2 = win_combination[1]
         win_index_3 = win_combination[2]
-  
+
         position_1 = board[win_index_1]
         position_2 = board[win_index_2]
         position_3 = board[win_index_3]
-        
+
         if position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index_1)
             return win_combination
         else
@@ -103,7 +103,7 @@ def won?(board)
     end
     false
 end
-  
+
 #full?
 def full?(board)
     if board.any? {|index| index == nil || index == " "}
@@ -112,7 +112,7 @@ def full?(board)
       return true
     end
   end
-  
+
 #draw?
 def draw?(board)
     if full?(board) == true && won?(board) == false
@@ -121,7 +121,7 @@ def draw?(board)
       false
     end
   end
-  
+
 #over?
 def over?(board)
     if won?(board) || full?(board) || draw?(board)
@@ -130,7 +130,7 @@ def over?(board)
       return false
     end
   end
-  
+
 #winer
 def winner(board)
     if won?(board)
