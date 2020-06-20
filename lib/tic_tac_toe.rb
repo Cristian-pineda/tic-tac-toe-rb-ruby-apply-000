@@ -140,4 +140,3 @@ end
 
 #play
 def play(board)
-  
