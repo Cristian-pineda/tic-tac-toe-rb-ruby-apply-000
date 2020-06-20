@@ -49,7 +49,7 @@ end
 end
 
 # Move
-def move(board,input_to_index,value = "X")
+def move(board,input_to_index,value)
     board[input_to_index] = value
 end
 
