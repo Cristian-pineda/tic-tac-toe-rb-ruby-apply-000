@@ -145,6 +145,7 @@ def play(board)
   end
   if won?(board)
     winner(board) == "X" || winner(board) == "O"
+    put #
     puts "CONGRADULATIONS!"
     puts #
     puts "PLAYER #{winner(board)}."
@@ -152,7 +153,10 @@ def play(board)
     puts "YOU HAVE WON THIS ROUND."
     puts #
   else
+    puts #
     puts "GAME OVER!"
+    puts #
     puts "IT SEEMS WE HAVE A TIE ON OUT HANDS."
+    puts #
   end
 end
