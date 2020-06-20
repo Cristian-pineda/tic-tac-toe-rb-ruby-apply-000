@@ -141,22 +141,12 @@ end
 #play
 def play(board)
   until over?(board)
-    turn(board)
+    turn(board) 
   end
   if won?(board)
     winner(board) == "X" || winner(board) == "O"
-    puts #
-    puts "CONGRADULATIONS!"
-    puts #
-    puts "PLAYER #{winner(board)}."
-    puts #
-    puts "YOU HAVE WON THIS ROUND."
-    puts #
-  else
-    puts #
-    puts "GAME OVER!"
-    puts #
-    puts "IT SEEMS WE HAVE A TIE ON OUT HANDS."
-    puts #
+    puts "Congratulations #{winner(board)}!"
+  else draw?(board)
+    puts "Cat\'s Game!"
   end
 end
