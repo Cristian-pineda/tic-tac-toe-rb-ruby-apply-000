@@ -150,7 +150,7 @@ def play(board)
     puts "PLAYER #{winner(board)}."
     puts #
     puts "YOU HAVE WON THIS ROUND."
-    puts # 
+    puts #
   else
     puts "GAME OVER!"
     puts "IT SEEMS WE HAVE A TIE ON OUT HANDS."
